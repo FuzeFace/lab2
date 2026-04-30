@@ -1,0 +1,11 @@
+                   precision    recall  f1-score   support
+
+           Crafts       0.50      0.75      0.60         8
+            Games       0.67      0.50      0.57         8
+             Toys       0.62      0.62      0.62         8
+Tricks and Pranks       0.50      0.38      0.43         8
+      Woodworking       0.50      0.50      0.50         8
+
+         accuracy                           0.55        40
+        macro avg       0.56      0.55      0.54        40
+     weighted avg       0.56      0.55      0.54        40
