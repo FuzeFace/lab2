@@ -1,0 +1,127 @@
+# Лабораторная работа 2 — Классификация видео
+
+## Цель работы
+
+Получить опыт работы с видеоданными и реализовать pipeline классификации видео.
+
+## Постановка задачи
+
+В работе решается задача классификации видео из подмножества **HowTo100M | Hobbies**.
+
+- Датасет: **HowTo100M**
+- Подмножество: **Hobbies / Hobbies and Crafts**
+- Целевая метка: `category_2`
+- Векторы: **VideoPrism**
+- Модель: **обучаемый MLP-классификатор поверх VideoPrism-векторов**
+
+## Данные
+
+Для эксперимента была автоматически скачана небольшая подвыборка видео из metadata HowTo100M.
+Часть исходных YouTube-видео может быть недоступна, поэтому итоговый размер выборки определяется только успешно скачанными и обработанными видео.
+
+- Всего объектов после фильтрации: **200**
+- Число классов: **5**
+- Train: **120**
+- Validation: **40**
+- Test: **40**
+
+## Предобработка видео
+
+1. Загрузка короткого фрагмента видео.
+2. Извлечение `16` кадров.
+3. Resize кадров до `288x288`.
+4. Нормализация RGB-значений в диапазон `[0, 1]`.
+5. Передача кадров в VideoPrism.
+6. Mean pooling по токенам VideoPrism для получения одного вектора на видео.
+
+## Извлечение признаков
+
+Использовался VideoPrism: `videoprism_public_v1_base`.
+
+Размерность итогового вектора: `D = 768`
+
+## Архитектура модели
+
+Использовался MLP-классификатор:
+
+- Linear(D -> 512)
+- LayerNorm
+- GELU
+- Dropout(0.35)
+- Linear(512 -> 256)
+- LayerNorm
+- GELU
+- Dropout(0.35)
+- Linear(256 -> 5)
+
+Функция потерь: `CrossEntropyLoss`.
+
+Оптимизатор: `AdamW`, learning rate = `0.001`, weight decay = `0.0001`.
+
+## Метрики на test
+
+| Metric | Value |
+|---|---:|
+| loss | 1.7386 |
+| accuracy | 0.5500 |
+| top_5_accuracy | 1.0000 |
+| precision_macro | 0.5583 |
+| recall_macro | 0.5500 |
+| f1_macro | 0.5450 |
+| precision_weighted | 0.5583 |
+| recall_weighted | 0.5500 |
+| f1_weighted | 0.5450 |
+
+## Графики
+
+### Распределение классов
+
+![Class Distribution](class_distribution.png)
+
+### Loss
+
+![Loss Curve](loss_curve.png)
+
+### Accuracy
+
+![Accuracy Curve](accuracy_curve.png)
+
+### F1 Macro
+
+![F1 Macro Curve](f1_macro_curve.png)
+
+### Confusion Matrix
+
+![Confusion Matrix](confusion_matrix.png)
+
+## Classification Report
+
+|                   |   precision |   recall |   f1-score |   support |
+|:------------------|------------:|---------:|-----------:|----------:|
+| Crafts            |      0.5    |    0.75  |     0.6    |      8    |
+| Games             |      0.6667 |    0.5   |     0.5714 |      8    |
+| Toys              |      0.625  |    0.625 |     0.625  |      8    |
+| Tricks and Pranks |      0.5    |    0.375 |     0.4286 |      8    |
+| Woodworking       |      0.5    |    0.5   |     0.5    |      8    |
+| accuracy          |      0.55   |    0.55  |     0.55   |      0.55 |
+| macro avg         |      0.5583 |    0.55  |     0.545  |     40    |
+| weighted avg      |      0.5583 |    0.55  |     0.545  |     40    |
+
+## Анализ ошибок
+
+Файл с ошибочными предсказаниями: `misclassified_examples.csv`.
+Файл со всеми предсказаниями: `test_predictions.csv`.
+
+## Вывод
+
+В ходе лабораторной работы был реализован полный pipeline видеоклассификации:
+
+1. Получение metadata HowTo100M.
+2. Выбор подмножества Hobbies.
+3. Автоматическая загрузка небольшой выборки видео.
+4. Извлечение кадров.
+5. Получение VideoPrism-векторов.
+6. Обучение классификатора.
+7. Оценка качества по Accuracy, Precision, Recall, F1-score и Top-K Accuracy.
+8. Построение confusion matrix.
+9. Анализ ошибок классификации.
