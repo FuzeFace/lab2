@@ -293,14 +293,12 @@ F1 Macro использовалась как одна из основных ме
 |---|---|
 | [`experiment_config.json`](./results1/experiment_config.json) | Конфигурация эксперимента |
 | [`test_metrics.json`](./results1/test_metrics.json) | Метрики на test-выборке |
-| [`classification_report.txt`](./results1/classification_report.txt) | Classification report в текстовом виде |
 | [`classification_report.csv`](./results1/classification_report.csv) | Classification report в CSV |
 | [`confusion_matrix.png`](./results1/confusion_matrix.png) | Матрица ошибок |
 | [`loss_curve.png`](./results1/loss_curve.png) | График функции потерь |
 | [`accuracy_curve.png`](./results1/accuracy_curve.png) | График accuracy |
 | [`f1_macro_curve.png`](./results1/f1_macro_curve.png) | График F1 Macro |
 | [`class_distribution.png`](./results1/class_distribution.png) | Распределение классов |
-| [`training_history.csv`](./results1/training_history.csv) | История обучения |
 | [`dataset_used.csv`](./results1/dataset_used.csv) | Использованный датасет |
 | [`train_split.csv`](./results1/train_split.csv) | Train-выборка |
 | [`val_split.csv`](./results1/val_split.csv) | Validation-выборка |
