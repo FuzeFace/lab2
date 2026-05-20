@@ -1,0 +1,25 @@
+video_id,category_1,category_2,label,prob_Crafts,prob_Games,prob_Toys,prob_Tricks and Pranks,prob_Woodworking
+Cra_err1,Hobbies and Crafts,Crafts,0,0.292849,0.025404,0.585558,0.087875,0.008313
+Gam_err2,Hobbies and Crafts,Games,1,0.010366,0.087387,0.153323,0.302421,0.446503
+Toy_err3,Hobbies and Crafts,Toys,2,0.087995,0.04384,0.303331,0.099111,0.465722
+Tri_err4,Hobbies and Crafts,Tricks and Pranks,3,0.110366,0.130252,0.450532,0.102994,0.205855
+Woo_err5,Hobbies and Crafts,Woodworking,4,0.004582,0.312809,0.083206,0.397948,0.201455
+Cra_err6,Hobbies and Crafts,Crafts,0,0.349395,0.05654,0.034247,0.500707,0.059111
+Gam_err7,Hobbies and Crafts,Games,1,0.095466,0.308491,0.337572,0.142265,0.116206
+Toy_err8,Hobbies and Crafts,Toys,2,0.011888,0.225084,0.602505,0.026305,0.134218
+Tri_err9,Hobbies and Crafts,Tricks and Pranks,3,0.456004,0.091296,0.004518,0.13427,0.313912
+Woo_err10,Hobbies and Crafts,Woodworking,4,0.018167,0.671534,0.000128,0.276199,0.033972
+Cra_err11,Hobbies and Crafts,Crafts,0,0.107295,0.054204,0.40373,0.402337,0.032435
+Gam_err12,Hobbies and Crafts,Games,1,0.15399,0.256517,0.346345,0.091223,0.151926
+Toy_err13,Hobbies and Crafts,Toys,2,0.237164,0.292052,0.138639,0.128432,0.203714
+Tri_err14,Hobbies and Crafts,Tricks and Pranks,3,0.09872,0.322521,0.23583,0.208004,0.134925
+Woo_err15,Hobbies and Crafts,Woodworking,4,0.019189,0.370261,0.165121,0.197028,0.248401
+Cra_err16,Hobbies and Crafts,Crafts,0,0.03192,0.002298,0.148032,0.567268,0.250482
+Gam_err17,Hobbies and Crafts,Games,1,0.665073,0.001243,0.053777,0.120948,0.158958
+Toy_err18,Hobbies and Crafts,Toys,2,0.191278,0.333711,0.175076,0.002926,0.297009
+Tri_err19,Hobbies and Crafts,Tricks and Pranks,3,0.054158,0.238611,0.400547,0.029468,0.277216
+Woo_err20,Hobbies and Crafts,Woodworking,4,0.123562,0.022565,0.059388,0.369975,0.424509
+Cra_err21,Hobbies and Crafts,Crafts,0,0.318164,0.069887,0.140235,0.086843,0.384872
+Gam_err22,Hobbies and Crafts,Games,1,0.658067,0.02629,0.14681,0.088028,0.080805
+Toy_err23,Hobbies and Crafts,Toys,2,0.070192,0.084464,0.421683,0.179357,0.244304
+Tri_err24,Hobbies and Crafts,Tricks and Pranks,3,0.069385,0.106835,0.199557,0.117908,0.506315
