@@ -1,0 +1,9 @@
+Class,precision,recall,f1-score,support
+Crafts,0.73,0.77,0.75,48.0
+Games,0.76,0.73,0.74,48.0
+Toys,0.78,0.75,0.76,48.0
+Tricks and Pranks,0.71,0.69,0.7,48.0
+Woodworking,0.74,0.77,0.75,48.0
+accuracy,0.55,0.55,0.74,240.0
+macro avg,0.74,0.74,0.74,240.0
+weighted avg,0.74,0.74,0.74,240.0
